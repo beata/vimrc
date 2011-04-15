@@ -19,3 +19,6 @@
 [submodule "bundle/jQuery"]
 	path = bundle/jQuery
 	url = https://github.com/vim-scripts/jQuery.git
+[submodule "bundle/php.vim--Garvin"]
+	path = bundle/php.vim--Garvin
+	url = https://github.com/vim-scripts/php.vim--Garvin.git
