@@ -68,6 +68,11 @@ ino " ""<esc>:let leavechar='"'<CR>i
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" Simple-Javascript-Indenter
+" -------------------------------------------------
+let g:SimpleJsIndenter_BriefMode = 1
+
+
 
 " ============================================================
 " Syntax & Filetype

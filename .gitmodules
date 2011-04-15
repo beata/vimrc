@@ -1,0 +1,3 @@
+[submodule "bundle/Simple-Javascript-Indenter"]
+	path = bundle/Simple-Javascript-Indenter
+	url = https://github.com/vim-scripts/Simple-Javascript-Indenter.git
