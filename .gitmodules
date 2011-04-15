@@ -43,3 +43,9 @@
 [submodule "bundle/auto_mkdir"]
 	path = bundle/auto_mkdir
 	url = https://github.com/vim-scripts/auto_mkdir.git
+[submodule "molly.vim"]
+	path = molly.vim
+	url = https://github.com/vim-scripts/molly.vim.git
+[submodule "bundle/molly.vim"]
+	path = bundle/molly.vim
+	url = https://github.com/vim-scripts/molly.vim.git
