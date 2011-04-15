@@ -28,3 +28,6 @@
 [submodule "bundle/buftabs"]
 	path = bundle/buftabs
 	url = https://github.com/vim-scripts/buftabs.git
+[submodule "bundle/Gist.vim"]
+	path = bundle/Gist.vim
+	url = https://github.com/vim-scripts/Gist.vim.git
