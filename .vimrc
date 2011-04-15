@@ -68,6 +68,11 @@ ino " ""<esc>:let leavechar='"'<CR>i
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" ftplugin - xml.vim
+" -------------------------------------------------
+let xml_use_xhtml = 1
+let xml_no_html = 1
+
 " Simple-Javascript-Indenter
 " -------------------------------------------------
 let g:SimpleJsIndenter_BriefMode = 1
