@@ -10,6 +10,7 @@ set nobackup
 set nocompatible
 set number
 set cursorline
+set ruler
 
 " indent
 " -------------------------------------------------
@@ -44,7 +45,7 @@ language messages zh_TW.UTF-8
 " -------------------------------------------------
 colorscheme desert
 if has('gui_running')
-    set guifont=Droid_Sans_Mono:h11
+    set guifont=DejaVu\ Sans\ Mono:h13
     set guioptions-=T
     source $VIMRUNTIME/delmenu.vim
     set langmenu=zh_tw.utf-8
