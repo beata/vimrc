@@ -22,3 +22,6 @@
 [submodule "bundle/php.vim--Garvin"]
 	path = bundle/php.vim--Garvin
 	url = https://github.com/vim-scripts/php.vim--Garvin.git
+[submodule "bundle/php.vim--Nicholson"]
+	path = bundle/php.vim--Nicholson
+	url = https://github.com/vim-scripts/php.vim--Nicholson.git
