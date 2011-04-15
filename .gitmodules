@@ -10,3 +10,6 @@
 [submodule "bundle/twilight256"]
 	path = bundle/twilight256
 	url = https://github.com/vim-scripts/twilight256.vim.git
+[submodule "bundle/xml.vim"]
+	path = bundle/xml.vim
+	url = https://github.com/vim-scripts/xml.vim.git
