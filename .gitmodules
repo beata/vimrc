@@ -16,3 +16,6 @@
 [submodule "bundle/Markdown"]
 	path = bundle/Markdown
 	url = https://github.com/vim-scripts/Markdown.git
+[submodule "bundle/jQuery"]
+	path = bundle/jQuery
+	url = https://github.com/vim-scripts/jQuery.git
