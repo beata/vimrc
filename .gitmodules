@@ -40,3 +40,6 @@
 [submodule "bundle/ZenCoding.vim"]
 	path = bundle/ZenCoding.vim
 	url = https://github.com/vim-scripts/ZenCoding.vim.git
+[submodule "bundle/auto_mkdir"]
+	path = bundle/auto_mkdir
+	url = https://github.com/vim-scripts/auto_mkdir.git
