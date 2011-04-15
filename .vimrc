@@ -75,12 +75,15 @@ let xml_no_html = 1
 
 " indent - Simple-Javascript-Indenter
 " -------------------------------------------------
-let g:SimpleJsIndenter_BriefMode = 1
+let SimpleJsIndenter_BriefMode = 1
 
 " syntax - Markdown
 " -------------------------------------------------
 autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
 
+" utility - buftabs
+" -------------------------------------------------
+let buftabs_only_basename = 1
 
 " ============================================================
 " Syntax & Filetype

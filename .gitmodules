@@ -25,3 +25,6 @@
 [submodule "bundle/php.vim--Nicholson"]
 	path = bundle/php.vim--Nicholson
 	url = https://github.com/vim-scripts/php.vim--Nicholson.git
+[submodule "bundle/buftabs"]
+	path = bundle/buftabs
+	url = https://github.com/vim-scripts/buftabs.git
