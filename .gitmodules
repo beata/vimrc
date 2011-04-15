@@ -37,3 +37,6 @@
 [submodule "bundle/YankRing"]
 	path = bundle/YankRing
 	url = https://github.com/vim-scripts/YankRing.vim
+[submodule "bundle/ZenCoding.vim"]
+	path = bundle/ZenCoding.vim
+	url = https://github.com/vim-scripts/ZenCoding.vim.git
