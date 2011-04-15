@@ -73,10 +73,13 @@ call pathogen#helptags()
 let xml_use_xhtml = 1
 let xml_no_html = 1
 
-" Simple-Javascript-Indenter
+" indent - Simple-Javascript-Indenter
 " -------------------------------------------------
 let g:SimpleJsIndenter_BriefMode = 1
 
+" syntax - Markdown
+" -------------------------------------------------
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
 
 
 " ============================================================
