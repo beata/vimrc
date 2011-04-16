@@ -87,6 +87,11 @@ else
     source $HOME/vimfiles/gist.vimrc
 endif
 
+" syntax - php.vim--Garvin
+let php_sql_query = 1
+let php_html_in_strings = 1
+let php_folding = 1
+
 " ============================================================
 " Syntax & Filetype
 " ============================================================
