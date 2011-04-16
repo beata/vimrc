@@ -77,10 +77,6 @@ let xml_no_html = 1
 " -------------------------------------------------
 let SimpleJsIndenter_BriefMode = 1
 
-" syntax - Markdown
-" -------------------------------------------------
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} set filetype=markdown
-
 " utility - buftabs
 " -------------------------------------------------
 let buftabs_only_basename = 1
@@ -91,7 +87,11 @@ let buftabs_only_basename = 1
 autocmd BufNewFile,BufRead *.html setfiletype xhtml | set noexpandtab
 autocmd BufNewFile,BufRead *.js   set noexpandtab
 autocmd BufNewFile,BufRead *.txt  setfiletype txt | let Tlist_Sort_Type = "order"
+" Markdown
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} setfiletype=markdown
+
 autocmd BufWritePre * :%s/\s\+$//e
+
 
 " ============================================================
 " Hotkeys
