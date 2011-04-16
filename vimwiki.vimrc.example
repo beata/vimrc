@@ -1,0 +1,10 @@
+if has('win32unix')
+    let s:vimwiki_root = '/cygdrive/f/Documents/Wiki/'
+else
+    let s:vimwiki_root = 'F:/Documents/Wiki/'
+endif
+
+let vimwiki_list = [
+    \ { 'path': s:vimwiki_root . '/default' },
+    \ { 'path': s:vimwiki_root . '/development' }
+\ ]

@@ -89,6 +89,9 @@ runtime gist.vimrc
 " utility - snipMate
 let snips_author = 'Beata Lin'
 
+" utility - vimwiki
+runtime vimwiki.vimrc
+
 " syntax - php.vim--Garvin
 let php_sql_query = 1
 let php_html_in_strings = 1
