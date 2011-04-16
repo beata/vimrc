@@ -69,17 +69,23 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " ftplugin - xml.vim
-" -------------------------------------------------
 let xml_use_xhtml = 1
 let xml_no_html = 1
 
 " indent - Simple-Javascript-Indenter
-" -------------------------------------------------
 let SimpleJsIndenter_BriefMode = 1
 
 " utility - buftabs
-" -------------------------------------------------
 let buftabs_only_basename = 1
+
+" utility - gist
+let gist_show_privates = 1
+
+if has('win32unix')
+    source $HOME/.vim/gist.vimrc
+else
+    source $HOME/vimfiles/gist.vimrc
+endif
 
 " ============================================================
 " Syntax & Filetype
