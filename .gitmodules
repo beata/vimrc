@@ -52,3 +52,6 @@
 [submodule "bundle/snipMate"]
 	path = bundle/snipMate
 	url = https://github.com/vim-scripts/snipMate.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
