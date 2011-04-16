@@ -1,3 +1,7 @@
+" Pathogen
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 " Basic Settings {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype on
@@ -5,8 +9,8 @@ filetype plugin on
 filetype indent on
 syntax on
 
-set nobackup
 set nocompatible
+set nobackup
 set number
 set cursorline
 set scrolloff=7
@@ -56,10 +60,6 @@ endif
 
 " Plugin Settings {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
-
 " ftplugin - xml.vim
 let xml_use_xhtml = 1
 let xml_no_html = 1
@@ -72,13 +72,13 @@ let buftabs_only_basename = 1
 
 " utility - gist
 let gist_show_privates = 1
-runtime gist.vimrc
+runtime user/gist.vim
 
 " utility - snipMate
 let snips_author = 'Beata Lin'
 
 " utility - vimwiki
-runtime vimwiki.vimrc
+runtime user/vimwiki.vim
 
 " syntax - php.vim--Garvin
 let php_sql_query = 1
@@ -87,16 +87,12 @@ let php_folding = 1
 
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufNewFile,BufRead *.html
-    \ set ft=xhtml
-autocmd BufNewFile,BufRead *.{html,js,css}
-    \ set noexpandtab
-autocmd BufNewFile,BufRead *.php
-    \ ino <? <?php  ?><esc><esc>hhi
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*}
-    \ setfiletype=markdown
-autocmd BufWritePre *
-    \ :%s/\s\+$//e " Strip white spaces before write
+autocmd FileType html setl ft=xhtml
+autocmd FileType html,js,css setl noexpandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType css ino !! !import
+autocmd FileType php ino <? <?php  ?><esc><esc>hhi
+
+autocmd BufWritePre * :%s/\s\+$//e " Strip white spaces before write
 
 
 " Map Commands {{{1
