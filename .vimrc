@@ -41,7 +41,7 @@ set encoding=utf-8
 set termencoding=utf-8
 language messages zh_TW.UTF-8
 
-" eye candy
+" environment
 " -------------------------------------------------
 colorscheme desert
 if has('gui_running')
@@ -50,6 +50,10 @@ if has('gui_running')
     source $VIMRUNTIME/delmenu.vim
     set langmenu=zh_tw.utf-8
     source $VIMRUNTIME/menu.vim
+endif
+
+if !has('win32unix')
+    set shell=cmd.exe
 endif
 
 " Auto complete of (, ", ', [, {
@@ -80,12 +84,7 @@ let buftabs_only_basename = 1
 
 " utility - gist
 let gist_show_privates = 1
-
-if has('win32unix')
-    source $HOME/.vim/gist.vimrc
-else
-    source $HOME/vimfiles/gist.vimrc
-endif
+runtime gist.vimrc
 
 " utility - snipMate
 let snips_author = 'Beata Lin'
@@ -94,11 +93,6 @@ let snips_author = 'Beata Lin'
 let php_sql_query = 1
 let php_html_in_strings = 1
 let php_folding = 1
-
-" utility - taglist
-if !has('win32unix')
-    set shell=cmd.exe
-endif
 
 " ============================================================
 " Syntax & Filetype
