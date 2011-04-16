@@ -1,6 +1,5 @@
-" =================================================
-" Basic Settings
-" =================================================
+" Basic Settings {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype on
 filetype plugin on
 filetype indent on
@@ -10,39 +9,38 @@ set nobackup
 set nocompatible
 set number
 set cursorline
+set scrolloff=7
 set ruler
 
+" backspace
+set backspace=eol,start,indent
+set whichwrap+=<,>,[,]
+
 " indent
-" -------------------------------------------------
 set autoindent
 set smartindent
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-" paste 選項打開會造成sts等選項被復位
-set nopaste
+set nopaste " paste 選項打開會造成sts等選項被復位
 
 " search
-" -------------------------------------------------
 set magic
 set hlsearch
 set incsearch
 set noignorecase
 set smartcase
 
-" charset
-" -------------------------------------------------
-set fileformats=unix,dos
-set fileformat=unix
-
+" environment
 set fileencodings=ucs-bom,utf-8,big5,cp936,gb18030,euc-jp,euc-kr,latin1
 set encoding=utf-8
 set termencoding=utf-8
-language messages zh_TW.UTF-8
 
-" environment
-" -------------------------------------------------
+set fileformats=unix,dos
+set fileformat=unix
+
+language messages zh_TW.UTF-8
 colorscheme desert
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono:h13
@@ -56,19 +54,9 @@ if !has('win32unix')
     set shell=cmd.exe
 endif
 
-" Auto complete of (, ", ', [, {
-" -------------------------------------------------
-ino ( ()<esc>:let leavechar=")"<CR>i
-ino { {}<esc>:let leavechar="}"<CR>i
-ino [ []<esc>:let leavechar="]"<CR>i
-ino ' ''<esc>:let leavechar="'"<CR>i
-ino " ""<esc>:let leavechar='"'<CR>i
-
-" ============================================================
-" Plugin settings
-" ============================================================
+" Plugin Settings {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
-" -------------------------------------------------
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -97,24 +85,64 @@ let php_sql_query = 1
 let php_html_in_strings = 1
 let php_folding = 1
 
-" ============================================================
-" Syntax & Filetype
-" ============================================================
-autocmd BufNewFile,BufRead *.html setfiletype xhtml | set noexpandtab
-autocmd BufNewFile,BufRead *.js   set noexpandtab
-autocmd BufNewFile,BufRead *.txt  setfiletype txt | let Tlist_Sort_Type = "order"
-" Markdown
-autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*} setfiletype=markdown
+" Automatic commands {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufRead *.html
+    \ set ft=xhtml
+autocmd BufNewFile,BufRead *.{html,js,css}
+    \ set noexpandtab
+autocmd BufNewFile,BufRead *.php
+    \ ino <? <?php  ?><esc><esc>hhi
+autocmd BufNewFile,BufRead *.{md,mkd,mkdn,mark*}
+    \ setfiletype=markdown
+autocmd BufWritePre *
+    \ :%s/\s\+$//e " Strip white spaces before write
 
-autocmd BufWritePre * :%s/\s\+$//e
 
-
-" ============================================================
-" Map Commands
-" ============================================================
+" Map Commands {{{1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","
-map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-" utility - taglist
-nmap <silent> <leader>t :TlistToggle<CR>
+" Buffers {{{2
+    " Close the current buffer
+    map <leader>bd :Bclose<cr>
+    " Close all the buffers
+    map <leader>ba :1,300 bd!<cr>
+    " Use the arrows to something usefull
+    no <right> :bn<cr>
+    no <left> :bp<cr>
 
+" Auto Complete {{{2
+    ino {{ {{  }}<esc><esc>hhi
+    ino {% {%  %}<esc><esc>hhi
+    ino { {}<esc>i
+    ino [ []<esc>i
+    ino ( ()<esc>i
+    ino ' ''<esc>i
+    ino " ""<esc>i
+
+" Misc {{{2
+    " close highlight search
+    nnoremap <silent> <ESC> <ESC>:nohlsearch<CR>
+    " Remove the Windows ^M - when the encodings gets messed up
+    map <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+    " open other file
+    map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" Plugin {{{2
+    " load xml plugin {{{3
+    function! LoadXMLEdit()
+        let orig=&filetype
+        unlet b:did_ftplugin
+        set ft=xhtml
+        ru ftplugin/xml.vim
+        unlet b:did_ftplugin
+        exec "set ft=".orig
+    endfunction " }}}3
+
+    map <leader>xml :call LoadXMLEdit()<CR>
+    map <silent> <leader>t :TlistToggle<CR>
+    map <silent> <leader>y :YRShow<CR>
+
+" }}}2
+" vim: set foldmethod=marker
