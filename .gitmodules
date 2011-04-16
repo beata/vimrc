@@ -58,18 +58,9 @@
 [submodule "bundle/lua_omni"]
 	path = bundle/lua_omni
 	url = https://github.com/vim-scripts/lua_omni.git
-[submodule "lua-support"]
-	path = lua-support
+[submodule "bundle/lua-support"]
+	path = bundle/lua-support
 	url = https://github.com/vim-scripts/lua-support.git
 [submodule "bundle/checksyntax_vim"]
 	path = bundle/checksyntax_vim
 	url = https://github.com/tomtom/checksyntax_vim.git
-[submodule "bundle/luainspect.vim"]
-	path = bundle/luainspect.vim
-	url = https://github.com/vim-scripts/luainspect.vim.git
-[submodule "bundle/luarefvim"]
-	path = bundle/luarefvim
-	url = https://github.com/vim-scripts/luarefvim.git
-[submodule "bundle/vim-lua-inspect"]
-	path = bundle/vim-lua-inspect
-	url = https://github.com/xolox/vim-lua-inspect.git
