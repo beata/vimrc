@@ -95,6 +95,11 @@ let php_sql_query = 1
 let php_html_in_strings = 1
 let php_folding = 1
 
+" utility - taglist
+if !has('win32unix')
+    set shell=cmd.exe
+endif
+
 " ============================================================
 " Syntax & Filetype
 " ============================================================
@@ -108,8 +113,11 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 
 " ============================================================
-" Hotkeys
+" Map Commands
 " ============================================================
 let mapleader=","
 map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+
+" utility - taglist
+nmap <silent> <leader>t :TlistToggle<CR>
 
