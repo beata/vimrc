@@ -46,13 +46,6 @@ set fileformat=unix
 
 language messages zh_TW.UTF-8
 colorscheme desert
-if has('gui_running')
-    set guifont=DejaVu\ Sans\ Mono:h13
-    set guioptions-=T
-    source $VIMRUNTIME/delmenu.vim
-    set langmenu=zh_tw.utf-8
-    source $VIMRUNTIME/menu.vim
-endif
 
 if !has('win32unix')
     set shell=cmd.exe
@@ -79,6 +72,9 @@ let snips_author = 'Beata Lin'
 
 " utility - vimwiki
 runtime user/vimwiki.vim
+
+" utility - ConqueTerm
+runtime user/ConqueTerm.vim
 
 " syntax - php.vim--Garvin
 let php_sql_query = 1
@@ -116,6 +112,7 @@ let mapleader=","
     ino ( ()<esc>i
     ino ' ''<esc>i
     ino " ""<esc>i
+
 
 " Misc {{{2
     " close highlight search
