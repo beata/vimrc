@@ -55,9 +55,6 @@
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
 	url = https://github.com/vim-scripts/vimwiki.git
-[submodule "bundle/lua_omni"]
-	path = bundle/lua_omni
-	url = https://github.com/vim-scripts/lua_omni.git
 [submodule "bundle/lua-support"]
 	path = bundle/lua-support
 	url = https://github.com/vim-scripts/lua-support.git
