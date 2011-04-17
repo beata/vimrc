@@ -4,17 +4,14 @@ call pathogen#helptags()
 
 " Basic Settings {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype on
-filetype plugin on
-filetype indent on
-syntax on
-
 set nocompatible
 set nobackup
+set history=50
 set number
 set cursorline
 set scrolloff=7
 set ruler
+set showcmd
 
 " backspace
 set backspace=eol,start,indent
@@ -50,6 +47,10 @@ colorscheme desert
 if !has('win32unix')
     set shell=cmd.exe
 endif
+
+filetype on
+filetype plugin indent on
+syntax on
 
 " Plugin Settings {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -87,6 +88,7 @@ autocmd FileType html setl ft=xhtml
 autocmd FileType html,js,css setl noexpandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css ino !! !import
 autocmd FileType php ino <? <?php  ?><esc><esc>hhi
+autocmd FileType text setlocal textwidth=78
 
 autocmd BufWritePre * :%s/\s\+$//e " Strip white spaces before write
 
