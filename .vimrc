@@ -41,11 +41,15 @@ set termencoding=utf-8
 set fileformats=unix,dos
 set fileformat=unix
 
+set langmenu=zh_tw.utf-8
 language messages zh_TW.UTF-8
-colorscheme desert
 
 if !has('win32unix')
     set shell=cmd.exe
+endif
+
+if !has('guirunning')
+    colorscheme twilight256
 endif
 
 filetype on
