@@ -65,6 +65,9 @@ let xml_no_html = 1
 " indent - Simple-Javascript-Indenter
 let SimpleJsIndenter_BriefMode = 1
 
+" utility - taglist
+let Tlist_Inc_Winwidth = 0
+
 " utility - buftabs
 let buftabs_only_basename = 1
 
