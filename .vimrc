@@ -103,9 +103,9 @@ let mapleader=","
 
 " Buffers {{{2
     " Close the current buffer
-    map <leader>bd :Bclose<cr>
+    nmap <leader>bd :Bclose<cr>
     " Close all the buffers
-    map <leader>ba :1,300 bd!<cr>
+    nmap <leader>ba :1,300 bd!<cr>
     " Use the arrows to something usefull
     no <right> :bn<cr>
     no <left> :bp<cr>
@@ -124,9 +124,9 @@ let mapleader=","
     " close highlight search
     nnoremap <silent> <ESC> <ESC>:nohlsearch<CR>
     " Remove the Windows ^M - when the encodings gets messed up
-    map <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+    nmap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
     " open other file
-    map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+    nmap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Plugin {{{2
     " load xml plugin {{{3
@@ -139,9 +139,9 @@ let mapleader=","
         exec "set ft=".orig
     endfunction " }}}3
 
-    map <leader>xml :call LoadXMLEdit()<CR>
-    map <silent> <leader>t :TlistToggle<CR>
-    map <silent> <leader>y :YRShow<CR>
+    nmap <leader>xml :call LoadXMLEdit()<CR>
+    nmap <silent> <leader>t :TlistToggle<CR>
+    nmap <silent> <leader>y :YRShow<CR>
 
 " }}}2
 " vim: set foldmethod=marker
