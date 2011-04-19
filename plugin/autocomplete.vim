@@ -9,6 +9,6 @@ cno ( ()<Left>
 ino ' ''<esc>i
 cno ' ''<Left>
 ino " ""<esc>i
-cno " "<Left>
+cno " ""<Left>
 
 au FileType php ino <? <?php  ?><esc><esc>hhi
