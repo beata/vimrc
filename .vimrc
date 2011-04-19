@@ -68,31 +68,22 @@ let SimpleJsIndenter_BriefMode = 1
 " utility - buftabs
 let buftabs_only_basename = 1
 
-" utility - gist
-let gist_show_privates = 1
-runtime user/gist.vim
-
-" utility - snipMate
-let snips_author = 'Beata Lin'
-
-" utility - vimwiki
-runtime user/vimwiki.vim
-
-" utility - ConqueTerm
-runtime user/ConqueTerm.vim
-
 " syntax - php.vim--Garvin
 let php_sql_query = 1
 let php_html_in_strings = 1
 let php_folding = 1
+
+runtime user/gist.vim
+runtime user/snipMate.vim
+runtime user/vimwiki.vim
+runtime user/ConqueTerm.vim
 
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType html setl ft=xhtml
 autocmd FileType html,js,css setl noexpandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css ino !! !import
-autocmd FileType php ino <? <?php  ?><esc><esc>hhi
-autocmd FileType text setlocal textwidth=78
+autocmd FileType text setl textwidth=78
 
 autocmd BufWritePre * :%s/\s\+$//e " Strip white spaces before write
 
@@ -109,16 +100,6 @@ let mapleader=","
     " Use the arrows to something usefull
     no <right> :bn<cr>
     no <left> :bp<cr>
-
-" Auto Complete {{{2
-    ino {{ {{  }}<esc><esc>hhi
-    ino {% {%  %}<esc><esc>hhi
-    ino { {}<esc>i
-    ino [ []<esc>i
-    ino ( ()<esc>i
-    ino ' ''<esc>i
-    ino " ""<esc>i
-
 
 " Misc {{{2
     " close highlight search
