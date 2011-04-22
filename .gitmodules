@@ -54,7 +54,7 @@
 	url = https://github.com/vim-scripts/taglist.vim.git
 [submodule "bundle/vimwiki"]
 	path = bundle/vimwiki
-	url = https://github.com/vim-scripts/vimwiki.git
+	url = git@github.com:beata/vimwiki.git
 [submodule "bundle/lua-support"]
 	path = bundle/lua-support
 	url = https://github.com/vim-scripts/lua-support.git
