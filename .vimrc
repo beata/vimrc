@@ -67,7 +67,6 @@ let SimpleJsIndenter_BriefMode = 1
 
 " utility - taglist
 let Tlist_Inc_Winwidth = 0
-let Tlist_Show_Menu = 1
 
 " utility - buftabs
 let buftabs_only_basename = 1
