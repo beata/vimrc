@@ -67,3 +67,6 @@
 [submodule "bundle/lua_omni"]
 	path = bundle/lua_omni
 	url = git@github.com:beata/lua_omni.git
+[submodule "bundle/fecompressor.vim"]
+	path = bundle/fecompressor.vim
+	url = https://github.com/vim-scripts/fecompressor.vim.git
