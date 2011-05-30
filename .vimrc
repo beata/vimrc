@@ -44,7 +44,7 @@ set fileformat=unix
 set langmenu=zh_tw.utf-8
 language messages zh_TW.UTF-8
 
-if !has('win32unix')
+if has('win32') && !has('win32unix')
     set shell=cmd.exe
 endif
 
