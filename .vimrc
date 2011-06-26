@@ -71,6 +71,9 @@ let Tlist_Inc_Winwidth = 0
 " utility - buftabs
 let buftabs_only_basename = 1
 
+" utility - yankring
+let yankring_history_file = '.vim_yankring_history'
+
 " syntax - php.vim--Garvin
 let php_sql_query = 1
 let php_html_in_strings = 1
@@ -84,7 +87,7 @@ runtime user/ConqueTerm.vim
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType html setl ft=xhtml
-autocmd FileType html,js,css setl noexpandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType html,js,css setl noexpandtab ts=4 shiftwidth=4 softtabstop=4
 autocmd FileType css ino !! !import
 autocmd FileType text setl textwidth=78
 
@@ -102,8 +105,6 @@ let mapleader=","
     nnoremap <leader>ba :1,300 bd!<cr>
 
 " Misc {{{2
-    " close highlight search
-    nnoremap <silent> <ESC> <ESC>:nohlsearch<CR>
     " Remove the Windows ^M - when the encodings gets messed up
     nnoremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
     " open other file
@@ -123,6 +124,7 @@ let mapleader=","
     nnoremap <leader>xml :call LoadXMLEdit()<CR>
     nnoremap <silent> <leader>t :TlistToggle<CR>
     nnoremap <silent> <leader>y :YRShow<CR>
+    nnoremap <silent> <leader>f :NERDTreeToggle<CR>
 
 " }}}2
 " vim: set foldmethod=marker
