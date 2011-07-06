@@ -79,6 +79,10 @@ let php_sql_query = 1
 let php_html_in_strings = 1
 let php_folding = 1
 
+" vim-indent-guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+
 runtime user/gist.vim
 runtime user/snipMate.vim
 runtime user/vimwiki.vim
