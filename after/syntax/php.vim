@@ -1,1 +1,1 @@
-set foldmethod=marker
+set foldmethod=syntax

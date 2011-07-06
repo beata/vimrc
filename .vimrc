@@ -87,7 +87,7 @@ runtime user/ConqueTerm.vim
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType html setl ft=xhtml
-autocmd FileType html,js,css setl noexpandtab ts=4 shiftwidth=4 softtabstop=4
+autocmd FileType html,js,css setl expandtab ts=4 shiftwidth=4 softtabstop=4
 autocmd FileType css ino !! !import
 autocmd FileType text setl textwidth=78
 
