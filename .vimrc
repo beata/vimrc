@@ -48,7 +48,9 @@ if has('win32') && !has('win32unix')
     set shell=cmd.exe
 endif
 
-if !has('guirunning')
+if has('gui_running')
+    colorscheme molokai
+else
     colorscheme twilight256
 endif
 
@@ -79,7 +81,7 @@ let php_sql_query = 1
 let php_html_in_strings = 1
 let php_folding = 1
 
-" vim-indent-guides
+" utility - vim-indent-guides
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
