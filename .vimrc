@@ -34,6 +34,9 @@ set noignorecase
 set smartcase
 
 " environment
+set noerrorbells
+set visualbell
+set t_vb=
 set fileencodings=ucs-bom,utf-8,big5,cp936,gb18030,euc-jp,euc-kr,latin1
 set encoding=utf-8
 set termencoding=utf-8
@@ -50,6 +53,8 @@ endif
 
 if has('gui_running')
     colorscheme molokai
+    set guifont=Monaco:h11
+    set guioptions-=T
 else
     colorscheme twilight256
 endif
@@ -82,8 +87,8 @@ let php_html_in_strings = 1
 let php_folding = 1
 
 " utility - vim-indent-guides
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+let indent_guides_start_level = 2
+let indent_guides_guide_size = 1
 
 runtime user/gist.vim
 runtime user/snipMate.vim
