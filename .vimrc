@@ -52,8 +52,8 @@ if has('win32') && !has('win32unix')
 endif
 
 if has('gui_running')
-    colorscheme molokai
-    set guifont=Monaco:h11
+    colorscheme jellybeans
+    set guifont=menlo:h11
     set guioptions-=T
 else
     colorscheme twilight256
