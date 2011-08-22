@@ -98,9 +98,10 @@ runtime user/ConqueTerm.vim
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType html setl ft=xhtml
-autocmd FileType html,js,css setl expandtab ts=4 shiftwidth=4 softtabstop=4
+autocmd FileType html,css setl expandtab ts=4 shiftwidth=4 softtabstop=4
 autocmd FileType css ino !! !import
 autocmd FileType text setl textwidth=78
+autocmd FileType javascript setl expandtab ts=2 shiftwidth=2 softtabstop=2
 
 autocmd BufWritePre * :%s/\s\+$//e " Strip white spaces before write
 
