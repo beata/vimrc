@@ -85,3 +85,6 @@
 [submodule "bundle/vim-jade"]
 	path = bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "bundle/actionscript.vim--Cuss"]
+	path = bundle/actionscript.vim--Cuss
+	url = https://github.com/vim-scripts/actionscript.vim--Cuss.git
