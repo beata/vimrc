@@ -85,3 +85,6 @@
 [submodule "bundle/vim-jade"]
 	path = bundle/vim-jade
 	url = https://github.com/digitaltoad/vim-jade.git
+[submodule "bundle/actionscript.vim--Jethani"]
+	path = bundle/actionscript.vim--Jethani
+	url = https://github.com/vim-scripts/actionscript.vim--Jethani.git
