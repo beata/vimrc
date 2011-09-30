@@ -52,7 +52,7 @@ if has('win32') && !has('win32unix')
 endif
 
 if has('gui_running')
-    colorscheme jellybeans
+    colorscheme torte
     set guifont=menlo:h11
     set guioptions-=T
 else
