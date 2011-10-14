@@ -5,7 +5,6 @@ call pathogen#helptags()
 " Basic Settings {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-set nobackup
 set history=50
 set number
 set cursorline
@@ -59,6 +58,13 @@ else
     colorscheme twilight256
 endif
 
+" backups and undo
+set nobackup
+set nowb
+set noswapfile
+set undodir=~/.vim_runtime/undodir
+set undofile
+
 filetype on
 filetype plugin indent on
 syntax on
@@ -110,6 +116,12 @@ autocmd BufWritePre * :%s/\s\+$//e " Strip white spaces before write
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader=","
 
+" Window {{{2
+    map <C-j> <C-W>j
+    map <C-k> <C-W>k
+    map <C-h> <C-W>h
+    map <C-l> <C-W>l
+
 " Buffers {{{2
     " Close the current buffer
     nnoremap <leader>bd :Bclose<cr>
@@ -138,5 +150,40 @@ let mapleader=","
     nnoremap <silent> <leader>y :YRShow<CR>
     nnoremap <silent> <leader>f :NERDTreeToggle<CR>
 
+
+" Visual mode related {{{2
+    "  In visual mode when you press * or # to search for the current selection
+    vnoremap <silent> * :call VisualSearch('f')<CR>
+    vnoremap <silent> # :call VisualSearch('b')<CR>
+
+    " When you press gv you vimgrep after the selected text
+    vnoremap <silent> gv :call VisualSearch('gv')<CR>
+    map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+
+    function! CmdLine(str)
+        exe "menu Foo.Bar :" . a:str
+        emenu Foo.Bar
+        unmenu Foo
+    endfunction
+
+    " From an idea by Michael Naumann
+    function! VisualSearch(direction) range
+        let l:saved_reg = @"
+        execute "normal! vgvy"
+
+        let l:pattern = escape(@", '\\/.*$^~[]')
+        let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+        if a:direction == 'b'
+            execute "normal ?" . l:pattern . "^M"
+        elseif a:direction == 'gv'
+            call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+        elseif a:direction == 'f'
+            execute "normal /" . l:pattern . "^M"
+        endif
+
+        let @/ = l:pattern
+        let @" = l:saved_reg
+    endfunction
 " }}}2
 " vim: set foldmethod=marker
