@@ -62,8 +62,16 @@ endif
 set nobackup
 set nowb
 set noswapfile
-set undodir=~/.vim_runtime/undodir
-set undofile
+"Persistent undo
+try
+    if MySys() == "windows"
+      set undodir=C:\Windows\Temp
+    else
+      set undodir=~/.vim_runtime/undodir
+    endif
+    set undofile
+catch
+endtry
 
 filetype on
 filetype plugin indent on
