@@ -88,3 +88,6 @@
 [submodule "bundle/actionscript.vim--Cuss"]
 	path = bundle/actionscript.vim--Cuss
 	url = https://github.com/vim-scripts/actionscript.vim--Cuss.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
