@@ -104,6 +104,9 @@ let php_folding = 1
 let indent_guides_start_level = 2
 let indent_guides_guide_size = 1
 
+" utility - syntastic
+let syntastic_auto_loc_list=1
+
 runtime user/gist.vim
 runtime user/snipMate.vim
 runtime user/vimwiki.vim
