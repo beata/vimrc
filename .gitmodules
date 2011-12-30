@@ -46,9 +46,6 @@
 [submodule "bundle/molly.vim"]
 	path = bundle/molly.vim
 	url = https://github.com/vim-scripts/molly.vim.git
-[submodule "bundle/snipMate"]
-	path = bundle/snipMate
-	url = https://github.com/vim-scripts/snipMate.git
 [submodule "bundle/taglist"]
 	path = bundle/taglist
 	url = https://github.com/vim-scripts/taglist.vim.git
@@ -97,3 +94,6 @@
 [submodule "bundle/vim-align"]
 	path = bundle/vim-align
 	url = https://github.com/tsaleh/vim-align.git
+[submodule "bundle/snipmate.vim"]
+	path = bundle/snipmate.vim
+	url = https://github.com/msanders/snipmate.vim.git
