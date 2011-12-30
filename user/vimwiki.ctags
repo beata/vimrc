@@ -1,0 +1,9 @@
+--langdef=wiki
+--langmap=wiki:.wiki
+--regex-wiki=/^=[ \t]+(.+)[ \t]+=$/\1/h,header/
+--regex-wiki=/^==[ \t]+(.+)[ \t]+==$/. \1/h,header/
+--regex-wiki=/^===[ \t]+(.+)[ \t]+===$/.   \1/h,header/
+--regex-wiki=/^====[ \t]+(.+)[ \t]+====$/.     \1/h,header/
+--regex-wiki=/^=====[ \t]+(.+)[ \t]+=====$/.       \1/h,header/
+--regex-wiki=/^======[ \t]+(.+)[ \t]+======$/.         \1/h,header/
+
