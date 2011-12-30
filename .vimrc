@@ -56,6 +56,7 @@ if has('gui_running')
     set guioptions-=T
 else
     colorscheme twilight256
+    set t_Co=256
 endif
 
 " backups and undo
@@ -104,9 +105,6 @@ let php_folding = 1
 let indent_guides_start_level = 2
 let indent_guides_guide_size = 1
 
-" utility - syntastic
-let syntastic_auto_loc_list=1
-
 runtime user/gist.vim
 runtime user/snipMate.vim
 runtime user/vimwiki.vim
@@ -114,11 +112,10 @@ runtime user/ConqueTerm.vim
 
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType html setl ft=xhtml
-autocmd FileType html,css setl expandtab ts=4 shiftwidth=4 softtabstop=4
+autocmd FileType html setl ft=xhtml expandtab ts=2 shiftwidth=2 softtabstop=2
 autocmd FileType css ino !! !import
 autocmd FileType text setl textwidth=78
-autocmd FileType javascript setl expandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript,haml,css,sass setl expandtab ts=2 shiftwidth=2 softtabstop=2
 
 autocmd BufWritePre * :%s/\s\+$//e " Strip white spaces before write
 
