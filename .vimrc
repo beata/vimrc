@@ -160,6 +160,10 @@ let mapleader=","
 
 
 " Visual mode related {{{2
+
+    "  Convert table scheme to comma separated field list.
+    vnoremap <leader>s :s/.*\(`.*`\).*\n/\1, /g<cr>
+
     "  In visual mode when you press * or # to search for the current selection
     vnoremap <silent> * :call VisualSearch('f')<CR>
     vnoremap <silent> # :call VisualSearch('b')<CR>
