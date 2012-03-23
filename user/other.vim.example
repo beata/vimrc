@@ -1,0 +1,10 @@
+if has('gui_running')
+    colorscheme torte
+    set guifont=Monaco:h14
+    set guioptions-=T
+else
+    colorscheme torte
+    set t_Co=256
+endif
+
+

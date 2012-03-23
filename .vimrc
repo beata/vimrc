@@ -1,3 +1,4 @@
+" vim: set foldmethod=marker
 " Pathogen
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -52,10 +53,10 @@ endif
 
 if has('gui_running')
     colorscheme torte
-    set guifont=menlo:h11
+    set guifont=Monaco:h12
     set guioptions-=T
 else
-    colorscheme twilight256
+    colorscheme torte
     set t_Co=256
 endif
 
@@ -198,4 +199,5 @@ let mapleader=","
         let @" = l:saved_reg
     endfunction
 " }}}2
-" vim: set foldmethod=marker
+
+runtime user/other.vim
