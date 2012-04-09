@@ -100,7 +100,6 @@ let yankring_history_file = '.vim_yankring_history'
 " syntax - php.vim--Garvin
 let php_sql_query = 1
 let php_html_in_strings = 1
-let php_folding = 1
 
 " utility - vim-indent-guides
 let indent_guides_start_level = 2
