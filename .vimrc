@@ -153,7 +153,7 @@ let mapleader=","
     endfunction " }}}3
 
     nnoremap <leader>xml :call LoadXMLEdit()<CR>
-    nnoremap <silent> <leader>t :TlistToggle<CR>
+    nnoremap <silent> <leader>s :TlistToggle<CR>
     nnoremap <silent> <leader>y :YRShow<CR>
     nnoremap <silent> <leader>f :NERDTreeToggle<CR>
 
