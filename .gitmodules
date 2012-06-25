@@ -82,9 +82,6 @@
 [submodule "bundle/vim-align"]
 	path = bundle/vim-align
 	url = https://github.com/tsaleh/vim-align.git
-[submodule "bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
-	url = git@github.com:beata/snipmate.vim.git
 [submodule "bundle/phpfolding.vim"]
 	path = bundle/phpfolding.vim
 	url = https://github.com/vim-scripts/phpfolding.vim.git
