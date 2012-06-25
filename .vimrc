@@ -106,7 +106,6 @@ let indent_guides_start_level = 2
 let indent_guides_guide_size = 1
 
 runtime user/gist.vim
-runtime user/snipMate.vim
 runtime user/vimwiki.vim
 runtime user/ConqueTerm.vim
 
