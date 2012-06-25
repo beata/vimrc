@@ -91,3 +91,9 @@
 [submodule "bundle/VST"]
 	path = bundle/VST
 	url = https://github.com/vim-scripts/VST.git
+[submodule "bundle/RST-Tables-CJK"]
+	path = bundle/RST-Tables-CJK
+	url = https://github.com/vim-scripts/RST-Tables-CJK.git
+[submodule "bundle/snipmate-snippets"]
+	path = bundle/snipmate-snippets
+	url = https://github.com/beata/snipmate-snippets.git
