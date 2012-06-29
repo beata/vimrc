@@ -1,7 +1,9 @@
 if has('win32unix')
     let s:vimwiki_root = '/cygdrive/f/Documents/Wiki/'
-else
+elseif has('win32')
     let s:vimwiki_root = 'F:/Documents/Wiki/'
+else
+    let s:vimwiki_root = '~/dev/wiki/'
 endif
 
 let vimwiki_list = [
