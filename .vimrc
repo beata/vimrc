@@ -105,18 +105,29 @@ let php_html_in_strings = 1
 let indent_guides_start_level = 2
 let indent_guides_guide_size = 1
 
+
+let g:auto_strip_trailing_whitespace = 1
+
 runtime user/gist.vim
 runtime user/vimwiki.vim
 runtime user/ConqueTerm.vim
 
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType html setl ft=xhtml expandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType php setl expandtab ts=4 shiftwidth=4 softtabstop=4
+autocmd FileType html,javascript,haml,css,sass,cucumber,yaml setl expandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType html setl ft=xhtml
 autocmd FileType css ino !! !import
 autocmd FileType text setl textwidth=78
-autocmd FileType javascript,haml,css,sass setl expandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript setl foldmethod=marker
 
-autocmd BufWritePre * :%s/\s\+$//e " Strip white spaces before write
+
+fun! StripTrailingWhitespace()
+    if g:auto_strip_trailing_whitespace
+        %s/\s\+$//e
+    endif
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 
 " Map Commands {{{1
