@@ -127,3 +127,6 @@
 [submodule "bundle/vim-coloresque"]
 	path = bundle/vim-coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque.git
+[submodule "bundle/breeze.vim"]
+	path = bundle/breeze.vim
+	url = https://github.com/gcmt/breeze.vim.git
