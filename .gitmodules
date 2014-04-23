@@ -130,3 +130,6 @@
 [submodule "bundle/SQLUtilities"]
 	path = bundle/SQLUtilities
 	url = https://github.com/vim-scripts/SQLUtilities.git
+[submodule "bundle/vim-bundler"]
+	path = bundle/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
