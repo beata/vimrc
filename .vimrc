@@ -1,7 +1,6 @@
 " vim: set foldmethod=marker
-" Pathogen
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+
+runtime vundle.vim
 
 " Basic Settings {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
