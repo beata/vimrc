@@ -1,6 +1,6 @@
 " vim: set foldmethod=marker
 
-runtime vundle.vim
+runtime plugins.vim
 
 " Functions {{{
 fun! StripTrailingWhitespace()
