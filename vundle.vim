@@ -5,23 +5,25 @@ filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tomtom/tlib_vim'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'mattn/webapi-vim'
+" Lib
+Plugin 'tomtom/tlib_vim' " required by vim-snipmate
+Plugin 'MarcWeber/vim-addon-mw-utils' " required by vim-snipmate
+Plugin 'mattn/webapi-vim' " required by Gist and emmet-vim
 
 Plugin 'vim-scripts/buftabs'
 Plugin 'kien/ctrlp.vim'
+
 Plugin 'sandeepcr529/Buffet.vim'
-Plugin 'vim-scripts/Conque-Shell'
+
 Plugin 'majutsushi/tagbar'
 Plugin 'vim-scripts/taglist.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'beata/vimwiki'
+
 Plugin 'vim-scripts/The-NERD-tree'
-Plugin 'vim-scripts/Gist.vim'
+
 Plugin 'vim-scripts/YankRing.vim'
+
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/auto_mkdir'
 
@@ -32,11 +34,8 @@ Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
 Plugin 'beata/snipmate-snippets'
 Plugin 'vim-scripts/Auto-Pairs'
-Plugin 'mattn/zencoding-vim'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/RST-Tables-CJK'
-Plugin 'vim-scripts/SQLUtilities'
-Plugin 'vim-scripts/VST'
+Plugin 'mattn/emmet-vim'
 Plugin 'tsaleh/vim-align'
 Plugin 'terryma/vim-multiple-cursors'
 
@@ -54,12 +53,16 @@ Plugin 'itspriddle/vim-jquery'
 " PHP
 Plugin 'vim-scripts/php.vim--Garvin'
 Plugin 'vim-scripts/php.vim--Nicholson'
-Plugin 'vim-scripts/phpfolding.vim'
+Plugin 'rayburgemeestre/phpfolding.vim'
 
 " HTML
 Plugin 'gcmt/breeze.vim'
 Plugin 'vim-scripts/xml.vim'
 Plugin 'digitaltoad/vim-jade'
+
+" reStructured Text
+Plugin 'vim-scripts/VST'
+Plugin 'vim-scripts/RST-Tables-CJK'
 
 " Ruby
 Plugin 'tpope/vim-bundler'
@@ -68,6 +71,15 @@ Plugin 'tpope/vim-rails'
 " CSS
 Plugin 'groenewege/vim-less'
 
+" SQL
+Plugin 'vim-scripts/SQLUtilities'
+
+" Git
+Plugin 'tpope/vim-fugitive'
+" Note
+Plugin 'vim-scripts/Gist.vim'
+Plugin 'beata/vimwiki'
+" Processor
 Plugin 'beata/fecompressor.vim'
 
 call vundle#end()

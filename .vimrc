@@ -2,6 +2,52 @@
 
 runtime vundle.vim
 
+" Functions {{{
+fun! StripTrailingWhitespace()
+    if g:auto_strip_trailing_whitespace
+        %s/\s\+$//e
+    endif
+endfun
+
+" load xml plugin
+fun! LoadXMLEdit()
+    let orig=&filetype
+    unlet b:did_ftplugin
+    set ft=xhtml
+    ru ftplugin/xml.vim
+    unlet b:did_ftplugin
+    exec "set ft=".orig
+endfun
+
+
+function! CmdLine(str)
+    exe "menu Foo.Bar :" . a:str
+    emenu Foo.Bar
+    unmenu Foo
+endfunction
+
+" From an idea by Michael Naumann
+function! VisualSearch(direction) range
+    let l:saved_reg = @"
+    execute "normal! vgvy"
+
+    let l:pattern = escape(@", '\\/.*$^~[]')
+    let l:pattern = substitute(l:pattern, "\n$", "", "")
+
+    if a:direction == 'b'
+        execute "normal ?" . l:pattern . "^M"
+    elseif a:direction == 'gv'
+        call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
+    elseif a:direction == 'f'
+        execute "normal /" . l:pattern . "^M"
+    endif
+
+    let @/ = l:pattern
+    let @" = l:saved_reg
+endfunction
+" }}}
+
+
 " Basic Settings {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
@@ -63,7 +109,7 @@ endif
 set nobackup
 set nowb
 set noswapfile
-"Persistent undo
+" Persistent undo
 try
     if MySys() == "windows"
       set undodir=C:\Windows\Temp
@@ -109,7 +155,6 @@ let g:auto_strip_trailing_whitespace = 1
 
 runtime user/gist.vim
 runtime user/vimwiki.vim
-runtime user/ConqueTerm.vim
 
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -122,11 +167,6 @@ autocmd FileType javascript setl foldmethod=marker
 autocmd BufEnter,BufNew *.hbs setl ft=xhtml
 
 
-fun! StripTrailingWhitespace()
-    if g:auto_strip_trailing_whitespace
-        %s/\s\+$//e
-    endif
-endfun
 autocmd BufWritePre * call StripTrailingWhitespace()
 
 
@@ -140,12 +180,6 @@ let mapleader=","
     map <C-h> <C-W>h
     map <C-l> <C-W>l
 
-" Buffers {{{2
-    " Close the current buffer
-    nnoremap <leader>bd :Bclose<cr>
-    " Close all the buffers
-    nnoremap <leader>ba :1,300 bd!<cr>
-
 " Misc {{{2
     " Remove the Windows ^M - when the encodings gets messed up
     nnoremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
@@ -153,16 +187,6 @@ let mapleader=","
     nnoremap <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Plugin {{{2
-    " load xml plugin {{{3
-    function! LoadXMLEdit()
-        let orig=&filetype
-        unlet b:did_ftplugin
-        set ft=xhtml
-        ru ftplugin/xml.vim
-        unlet b:did_ftplugin
-        exec "set ft=".orig
-    endfunction " }}}3
-
     nnoremap <leader>xml :call LoadXMLEdit()<CR>
     nnoremap <silent> <leader>s :TlistToggle<CR>
     nnoremap <silent> <leader>y :YRShow<CR>
@@ -182,31 +206,6 @@ let mapleader=","
     vnoremap <silent> gv :call VisualSearch('gv')<CR>
     map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
 
-    function! CmdLine(str)
-        exe "menu Foo.Bar :" . a:str
-        emenu Foo.Bar
-        unmenu Foo
-    endfunction
-
-    " From an idea by Michael Naumann
-    function! VisualSearch(direction) range
-        let l:saved_reg = @"
-        execute "normal! vgvy"
-
-        let l:pattern = escape(@", '\\/.*$^~[]')
-        let l:pattern = substitute(l:pattern, "\n$", "", "")
-
-        if a:direction == 'b'
-            execute "normal ?" . l:pattern . "^M"
-        elseif a:direction == 'gv'
-            call CmdLine("vimgrep " . '/'. l:pattern . '/' . ' **/*.')
-        elseif a:direction == 'f'
-            execute "normal /" . l:pattern . "^M"
-        endif
-
-        let @/ = l:pattern
-        let @" = l:saved_reg
-    endfunction
 " }}}2
 
 runtime user/other.vim
