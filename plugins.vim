@@ -12,18 +12,17 @@ Plugin 'tomtom/tlib_vim' " required by vim-snipmate
 Plugin 'MarcWeber/vim-addon-mw-utils' " required by vim-snipmate
 Plugin 'mattn/webapi-vim' " required by Gist and emmet-vim
 
-Plugin 'vim-scripts/buftabs'
-Plugin 'kien/ctrlp.vim'
-
+" Navigation
+Plugin 'wincent/command-t'
 Plugin 'sandeepcr529/Buffet.vim'
+Plugin 'scrooloose/nerdtree'
 
-Plugin 'majutsushi/tagbar'
+" ctags
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'majutsushi/tagbar'
 
-Plugin 'vim-scripts/The-NERD-tree'
 
 Plugin 'vim-scripts/YankRing.vim'
-
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/auto_mkdir'
 
@@ -77,7 +76,7 @@ Plugin 'vim-scripts/SQLUtilities'
 " Git
 Plugin 'tpope/vim-fugitive'
 " Note
-Plugin 'vim-scripts/Gist.vim'
+Bundle 'mattn/gist-vim'
 Plugin 'beata/vimwiki'
 " Processor
 Plugin 'beata/fecompressor.vim'

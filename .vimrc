@@ -136,9 +136,6 @@ let SimpleJsIndenter_BriefMode = 1
 " utility - taglist
 let Tlist_Inc_Winwidth = 0
 
-" utility - buftabs
-let buftabs_only_basename = 1
-
 " utility - yankring
 let yankring_history_file = '.vim_yankring_history'
 
@@ -188,10 +185,6 @@ let mapleader=","
 
 " Plugin {{{2
     nnoremap <leader>xml :call LoadXMLEdit()<CR>
-    nnoremap <silent> <leader>s :TlistToggle<CR>
-    nnoremap <silent> <leader>y :YRShow<CR>
-    nnoremap <silent> <leader>f :NERDTreeToggle<CR>
-
 
 " Visual mode related {{{2
 
