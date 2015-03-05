@@ -56,12 +56,15 @@ Plugin 'rayburgemeestre/phpfolding.vim'
 
 " HTML
 Plugin 'gcmt/breeze.vim'
-Plugin 'vim-scripts/xml.vim'
+Plugin 'othree/xml.vim'
 Plugin 'digitaltoad/vim-jade'
 
 " reStructured Text
 Plugin 'vim-scripts/VST'
 Plugin 'vim-scripts/RST-Tables-CJK'
+
+" mustache/handlebars
+Plugin 'mustache/vim-mustache-handlebars'
 
 " Ruby
 Plugin 'tpope/vim-bundler'

@@ -161,7 +161,6 @@ autocmd FileType html setl ft=xhtml
 autocmd FileType css ino !! !import
 autocmd FileType text setl textwidth=78
 autocmd FileType javascript setl foldmethod=marker
-autocmd BufEnter,BufNew *.hbs setl ft=xhtml
 
 
 autocmd BufWritePre * call StripTrailingWhitespace()
