@@ -46,10 +46,8 @@ Plugin 'alpaca-tc/beautify.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 
 " Javascript
-Plugin 'vim-scripts/jQuery'
 Plugin 'vim-scripts/Simple-Javascript-Indenter'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'itspriddle/vim-jquery'
 
 " PHP
 Plugin 'vim-scripts/php.vim--Garvin'
