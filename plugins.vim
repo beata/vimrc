@@ -40,9 +40,10 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'alpaca-tc/beautify.vim'
 
 " Color
-Plugin 'vim-scripts/jellybeans.vim'
-Plugin 'vim-scripts/molokai'
-Plugin 'vim-scripts/twilight256.vim'
+" Plugin 'vim-scripts/jellybeans.vim'
+" Plugin 'vim-scripts/molokai'
+" Plugin 'vim-scripts/twilight256.vim'
+Plugin 'gosukiwi/vim-atom-dark'
 
 " Javascript
 Plugin 'vim-scripts/jQuery'
