@@ -37,6 +37,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'tsaleh/vim-align'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'alpaca-tc/beautify.vim'
 
 " Color
 Plugin 'vim-scripts/jellybeans.vim'
