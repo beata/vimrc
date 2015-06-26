@@ -48,6 +48,7 @@ Plugin 'gosukiwi/vim-atom-dark'
 " Javascript
 Plugin 'vim-scripts/Simple-Javascript-Indenter'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'jelera/vim-javascript-syntax'
 
 " PHP
 Plugin 'vim-scripts/php.vim--Garvin'
