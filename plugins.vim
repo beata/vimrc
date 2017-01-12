@@ -46,9 +46,15 @@ Plugin 'alpaca-tc/beautify.vim'
 Plugin 'gosukiwi/vim-atom-dark'
 
 " Javascript
-Plugin 'vim-scripts/Simple-Javascript-Indenter'
+" Plugin 'vim-scripts/Simple-Javascript-Indenter'
+" Plugin 'jelera/vim-javascript-syntax'
+Plugin 'isRuslan/vim-es6'
+Plugin 'trotzig/import-js'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'jelera/vim-javascript-syntax'
+
+" Javascript - React
+Plugin 'mxw/vim-jsx'
+Plugin 'justinj/vim-react-snippets'
 
 " PHP
 Plugin 'vim-scripts/php.vim--Garvin'
@@ -79,10 +85,16 @@ Plugin 'vim-scripts/SQLUtilities'
 
 " Git
 Plugin 'tpope/vim-fugitive'
+
 " Note
 Bundle 'mattn/gist-vim'
 Plugin 'beata/vimwiki'
+
 " Processor
 Plugin 'beata/fecompressor.vim'
+
+" Presentation
+Plugin 'sotte/presenting.vim'
+
 
 call vundle#end()
