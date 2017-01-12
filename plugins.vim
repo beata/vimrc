@@ -87,11 +87,7 @@ Plugin 'vim-scripts/SQLUtilities'
 Plugin 'tpope/vim-fugitive'
 
 " Note
-Bundle 'mattn/gist-vim'
 Plugin 'beata/vimwiki'
-
-" Processor
-Plugin 'beata/fecompressor.vim'
 
 " Presentation
 Plugin 'sotte/presenting.vim'
