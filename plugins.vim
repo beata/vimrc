@@ -49,8 +49,8 @@ Plugin 'gosukiwi/vim-atom-dark'
 " Plugin 'vim-scripts/Simple-Javascript-Indenter'
 " Plugin 'jelera/vim-javascript-syntax'
 Plugin 'isRuslan/vim-es6'
-Plugin 'trotzig/import-js'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'Galooshi/vim-import-js'
 
 " Javascript - React
 Plugin 'mxw/vim-jsx'
@@ -71,8 +71,6 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'vim-scripts/VST'
 Plugin 'vim-scripts/RST-Tables-CJK'
 
-" mustache/handlebars
-Plugin 'mustache/vim-mustache-handlebars'
 
 " Ruby
 Plugin 'tpope/vim-bundler'
