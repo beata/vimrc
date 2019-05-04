@@ -87,9 +87,6 @@ Plugin 'vim-scripts/SQLUtilities'
 " Git
 Plugin 'tpope/vim-fugitive'
 
-" Note
-Plugin 'beata/vimwiki'
-
 " Presentation
 Plugin 'sotte/presenting.vim'
 

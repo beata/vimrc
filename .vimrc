@@ -151,7 +151,6 @@ let indent_guides_guide_size = 1
 let g:auto_strip_trailing_whitespace = 1
 
 runtime user/gist.vim
-runtime user/vimwiki.vim
 
 " Automatic commands {{{1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
