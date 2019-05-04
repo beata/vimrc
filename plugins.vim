@@ -64,6 +64,8 @@ Plugin 'gcmt/breeze.vim'
 Plugin 'othree/xml.vim'
 Plugin 'digitaltoad/vim-jade'
 
+" Twig
+Plugin 'evidens/vim-twig'
 
 " Ruby
 Plugin 'tpope/vim-bundler'
