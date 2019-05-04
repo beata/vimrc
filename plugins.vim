@@ -21,11 +21,9 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'majutsushi/tagbar'
 
-
 Plugin 'vim-scripts/YankRing.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-scripts/auto_mkdir'
-
 
 " Editing
 Plugin 'editorconfig/editorconfig-vim'
@@ -37,7 +35,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'mattn/emmet-vim'
 Plugin 'tsaleh/vim-align'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'alpaca-tc/beautify.vim'
 
 " Color
 " Plugin 'vim-scripts/jellybeans.vim'
@@ -66,10 +63,6 @@ Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'gcmt/breeze.vim'
 Plugin 'othree/xml.vim'
 Plugin 'digitaltoad/vim-jade'
-
-" reStructured Text
-Plugin 'vim-scripts/VST'
-Plugin 'vim-scripts/RST-Tables-CJK'
 
 
 " Ruby
