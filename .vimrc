@@ -157,6 +157,7 @@ runtime user/vimwiki.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType php,javascript,html,scss,less setl expandtab ts=4 shiftwidth=4 softtabstop=4
 autocmd FileType haml,css,sass,cucumber,yaml,ruby,eruby setl expandtab ts=2 shiftwidth=2 softtabstop=2
+autocmd FileType php setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType html setl ft=xhtml
 autocmd FileType css ino !! !import
 autocmd FileType text setl textwidth=78

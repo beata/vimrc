@@ -60,6 +60,7 @@ Plugin 'justinj/vim-react-snippets'
 Plugin 'vim-scripts/php.vim--Garvin'
 Plugin 'vim-scripts/php.vim--Nicholson'
 Plugin 'rayburgemeestre/phpfolding.vim'
+Plugin 'shawncplus/phpcomplete.vim'
 
 " HTML
 Plugin 'gcmt/breeze.vim'

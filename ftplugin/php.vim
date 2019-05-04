@@ -1,5 +1,3 @@
-setlocal keywordprg=pman
-
 " PHP
 " Convert table scheme to php class variable
 vnoremap <leader>v :s/.*`\(.*\)`.*/public $\1;/g<cr>
