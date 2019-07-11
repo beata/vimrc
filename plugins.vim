@@ -50,11 +50,9 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'Galooshi/vim-import-js'
 
 " Javascript - React
-Plugin 'mxw/vim-jsx'
 Plugin 'justinj/vim-react-snippets'
 
 " PHP
-Plugin 'vim-scripts/php.vim--Garvin'
 Plugin 'vim-scripts/php.vim--Nicholson'
 Plugin 'rayburgemeestre/phpfolding.vim'
 Plugin 'shawncplus/phpcomplete.vim'
@@ -62,23 +60,17 @@ Plugin 'shawncplus/phpcomplete.vim'
 " HTML
 Plugin 'gcmt/breeze.vim'
 Plugin 'othree/xml.vim'
-Plugin 'digitaltoad/vim-jade'
-
-" Twig
-Plugin 'evidens/vim-twig'
-
-" Ruby
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rails'
-
-" CSS
-Plugin 'groenewege/vim-less'
+Plugin 'othree/html5.vim'
+Plugin 'digitaltoad/vim-pug'
 
 " SQL
 Plugin 'vim-scripts/SQLUtilities'
 
 " Git
 Plugin 'tpope/vim-fugitive'
+
+" Syntax pack
+Plugin 'sheerun/vim-polyglot'
 
 " Presentation
 Plugin 'sotte/presenting.vim'
