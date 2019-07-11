@@ -9,3 +9,6 @@ au BufNewFile,BufRead *.md          setf markdown
 
 " Typescript
 au BufNewFile,BufRead *.ts          setf javascript
+
+" Flow
+au BufNewFile,BufRead *.flow          setf javascript
